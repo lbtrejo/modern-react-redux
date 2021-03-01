@@ -1,37 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src="https://source.unsplash.com/random"/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 3:00pm</span>
-                    </div>
-                    <div className="text">Nice blog post!</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src="https://source.unsplash.com/random"/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Bob
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 3:15pm</span>
-                    </div>
-                    <div className="text">Insightful</div>
-                </div>
-            </div>
+            <CommentDetail
+                author="Sam"
+                timeAgo="Today at 3:34pm"
+                content="Nice blog post!"
+                imgSrc="https://source.unsplash.com/random/150x150"
+            />
+            <CommentDetail
+                author="Alex"
+                timeAgo="Today at 4:49pm"
+                content="Creative and insightful"
+                imgSrc="https://source.unsplash.com/random/150x150"
+            />
+            <CommentDetail
+                author="Jane"
+                timeAgo="Yesterday at 9:31am"
+                content="Cool beans"
+                imgSrc="https://source.unsplash.com/random/150x150"
+            />
         </div>
     );
 };
