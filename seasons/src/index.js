@@ -18,8 +18,7 @@ class App extends React.Component {
         console.log('Component did update and re-rendered');
     }
 
-    // React requires a render() method for each component
-    render() {
+    renderContent() {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>;
         }
@@ -29,6 +28,11 @@ class App extends React.Component {
         }
 
         return <Loader message="Please accept location request"/>;
+    }
+
+    // React requires a render() method for each component
+    render() {
+        return <div className="border red">{this.renderContent()}</div>
     }
 }
 
