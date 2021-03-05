@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
     // Use an arrow function in the method which binds this to the class instance
     onFormSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.term);
+        this.props.onSubmit(this.state.term);
     };
 
     // Fix for 'this' in onFormSubmit method #3
