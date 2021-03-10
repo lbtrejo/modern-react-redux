@@ -1,9 +1,14 @@
 import React from 'react';
+import Loader from './Loader';
 
 const VideoDetail = ({ video }) => {
     // conditional loading on app initilization since video is initialized as null
     if (!video) {
-        return <div>Loading...</div>;
+        return (
+            <div className="ui embed">
+                <Loader message="Loading Youtube Data" />
+            </div>
+        );
     }
 
     const videoSrc = `https://youtube.com/embed/${video.id.videoId}`;
