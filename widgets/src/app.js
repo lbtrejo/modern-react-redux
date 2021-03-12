@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from './components/Accordion';
+import Search from './components/Search';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -20,7 +21,8 @@ export default () => {
 
     return (
         <div>
-            <Accordion items={items} />
+            {/* <Accordion items={items} /> */}
+            <Search />
         </div>
     );
 };
