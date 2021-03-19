@@ -4,6 +4,7 @@ import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
 import Route from './components/Route';
+import Header from './components/Header';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -39,57 +40,9 @@ export default () => {
 
     const [selected, setSelected] = useState(options[0]);
 
-    // const showAccordion = () => {
-    //     if (window.location.pathname === '/') {
-    //         return <Accordion items={items} />;
-    //     }
-    // };
-
-    // const showList = () => {
-    //     if (window.location.pathname === '/list') {
-    //         return <Search />;
-    //     }
-    // };
-
-    // const showDropdown = () => {
-    //     if (window.location.pathname === '/dropdown') {
-    //         return (
-    //             <Dropdown
-    //                 label="Select a color"
-    //                 selected={selected}
-    //                 onSelectChange={setSelected}
-    //                 options={options}
-    //             />
-    //         );
-    //     }
-    // };
-
-    // const showTranslate = () => {
-    //     if (window.location.pathname === '/translate') {
-    //         return <Translate />;
-    //     }
-    // };
-
-    const showComponent = (route, component) => {};
-
     return (
         <div>
-            {/* <Accordion items={items} /> */}
-            {/* <Search /> */}
-            {/* {showDropdown ? (
-                <Dropdown
-                    label="Select a color"
-                    selected={selected}
-                    onSelectedChange={setSelected}
-                    options={options}
-                />
-            ) : null} */}
-            {/* <Translate /> */}
-            {/* {showAccordion()}
-            {showList()}
-            {showDropdown()}
-            {showTranslate()} */}
-
+            <Header />
             <Route path="/">
                 <Accordion items={items} />
             </Route>
