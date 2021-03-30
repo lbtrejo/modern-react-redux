@@ -10,8 +10,8 @@ import reducers from './reducers';
 const store = (createStore(reducers, applyMiddleware(thunk)));
 
 ReactDOM.render(
-    <Provider>
-        <App store={store} />
+    <Provider store={store}>
+        <App />
     </Provider>,
     document.querySelector('#root')
 );
